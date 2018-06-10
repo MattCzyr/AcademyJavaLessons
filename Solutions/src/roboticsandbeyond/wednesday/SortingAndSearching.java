@@ -1,4 +1,4 @@
-package roboticsandbeyond;
+package roboticsandbeyond.wednesday;
 
 public class SortingAndSearching {
 
@@ -7,7 +7,7 @@ public class SortingAndSearching {
 	}
 
 	public static void insertionSort(int[] array) {
-		for (int i = 1; i < array.length; ++i) {
+		for (int i = 1; i < array.length; i++) {
 			int key = array[i];
 			int j = i - 1;
 			while (j >= 0 && array[j] > key) {
@@ -29,9 +29,9 @@ public class SortingAndSearching {
 			}
 		}
 	}
-	
+
 	public static void quickSort(int[] array) {
-		
+
 	}
 
 }
