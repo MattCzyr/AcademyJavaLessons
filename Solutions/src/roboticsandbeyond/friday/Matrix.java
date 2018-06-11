@@ -31,7 +31,7 @@ public class Matrix {
 		
 		Matrix result = new Matrix(rows, m.cols);
 		for (int i = 0; i < result.rows; i++) {
-			for (int j = 0; j < result.cols; i++) {
+			for (int j = 0; j < result.cols; j++) {
 				for (int k = 0; k < cols; k++) {
 					result.data[i][j] += (data[i][k] * m.data[k][j]);
 				}
@@ -39,6 +39,15 @@ public class Matrix {
 		}
 		
 		return result;
+	}
+	
+	public void print() {
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				System.out.print(data[i][j] + " ");
+			}
+			System.out.print("\n");
+		}
 	}
 	
 	public int getRows() {
