@@ -5,8 +5,8 @@
 ### Instruction
 First, have students set up a project in Eclipse and get comfortable with the
 IDE's layout and some of the more useful shortcuts (Ctrl-Shift-O, Ctrl-Shift-F,
-Ctrl-Space...). Then, spend a bit of time reviewing the very basics of Java
-to make sure everyone is up to speed. Students will need to be proficient in the
+Ctrl-Space...). Then, spend a bit of time reviewing the very basics of Java to
+make sure everyone is up to speed. Students will need to be proficient in the
 following topics before going further:
 
 - Input/output
@@ -19,8 +19,8 @@ following topics before going further:
 
 ### Project
 Have students create a calculator program that evaluates simple equations
-consisting of two operands and an operator. The calculator must support decimal
-operations and handle the following operations:
+consisting of two operands and an operator. The calculator should support decimal
+arithmetic and handle the following operations:
 
 - Addition
 - Subtraction
@@ -33,30 +33,31 @@ operations and handle the following operations:
 42.5
 /
 2.5
-=
-17.0
+42.5 / 2.5 = 17.0
 ```
+
+#### Solution Code
+[Calculator.java](solutions/monday/Calculator.java)
 
 
 ## Tuesday: Algorithms and Recursion
 
 ### Instruction
-Start off by introducing the concept of an
-[algorithm](https://en.wikipedia.org/wiki/Algorithm). Some (if not all)
+Start off by introducing the concept of an algorithm. Some (if not all)
 students will already be familiar with the idea, but make sure everyone is on
 the same page as to what exactly an algorithm is. Then, move on to talk about
-recursion. Again, they may already be familiar with the concept.  Then, move on
-to show some of the practical applications of recursion in writing algorithms,
-such as an algorithm for finding Fibonacci numbers. Lastly, make sure that
-students understand the difference between an iterative algorithm (i.e. one that
-uses a for loop) and a recursive algorithm.
+recursion. Again, they may already be familiar with the concept.  Show some of
+the practical applications of recursion in writing algorithms, such as an
+algorithm for finding Fibonacci numbers. Lastly, make sure that students
+understand the difference between an iterative algorithm (i.e. one that uses a
+for loop) and a recursive algorithm.
 
 ### Project
 Show students the [Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi)
 game. It will be helpful to draw diagrams. Students will then write a simple
-recursive algorithm to solve the puzzle. It will probably be necessary to
-provide some starter code from the solution (i.e. the method signature for the
-solve function) to set students in the right direction.
+recursive algorithm to solve the puzzle. It may be necessary to provide some
+starter code from the solution (i.e. the method signature for the solve function)
+to set students in the right direction.
 
 #### Sample Output
 ```
@@ -79,25 +80,35 @@ Moving disk 2 from SOURCE rod to TARGET rod
 Moving disk 1 from SPARE rod to TARGET rod
 ```
 
+#### Solution Code
+[Hanoi.java](solutions/tuesday/Hanoi.java)
+
 
 ## Wednesday: Algorithms pt. 2
 
 ### Instruction
 This lesson will focus on some important algorithms that students should be
 familiar with for AP Computer Science A and college-level courses: sorting
-algorithms (insertion sort, bubble sort, quicksort...). Diagrams will be
-helpful in explaining how each algorithm works. It may be helpful to give
-students a very brief introduction to
+algorithms. Diagrams will be helpful in explaining how each algorithm works.
+Be sure to cover the following algorithms in instruction:
+
+- Insertion sort
+- Bubble sort
+- Quick sort
+
+For more advanced students, show them the more complex algorithms like merge
+sort. It may be helpful to give students a brief introduction to
 [order notation](https://en.wikipedia.org/wiki/Big_O_notation) to show which
 algorithms are most efficient in different cases.
 
 ### Project
-Have students implement insertion sort, bubble sort, and quicksort. If time
-allows, students can implement more sorting algorithms in a similar fashion.
-You may choose to provide the main method from the solution so that students
-have a "driver" function to test their algorithms on as they progress. Or, you
-could just instruct students to create appropriate test cases before starting
-on the sorting algorithms themselves.
+Have students implement the sorting algorithms that were learned during
+instruction (by default: insertion sort, bubble sort, and quick sort). If time
+allows, help students implement more complex sorting algorithms in a similar
+fashion. You may choose to provide the main method from the solution so that
+students have a "driver" function to test their algorithms on as they progress. Or,
+you could just instruct students to create appropriate test cases before starting
+on the sorting algorithms.
 
 #### Sample Output
 ```
@@ -117,13 +128,16 @@ Running quickSort on large_array:
 2 5 6 9 10 12 13 14 15 17 19 20 27 34 38 44 50 54 60 66 74 77 81 92 
 ```
 
+#### Solution Code
+[Sorting.java](solutions/wednesday/Sorting.java)
+
 
 ## Thursday: Data Structures
 
 ### Instruction
 Introduce the concept of a data structure, relating it to the data types
-students are already familiar with. Summarize the following data structures and
-explain how they are similar or different from other data structures:
+students are already familiar with. Summarize the following data structures
+and explain how they are similar or different from other data structures:
 
 - Array
 - Vectors
@@ -176,6 +190,9 @@ John Smith's number is 123456789.
 stop
 ```
 
+#### Solution Code
+[PhoneBook.java](solutions/thursday/Phonebook.java)
+
 
 ## Friday: Object Orientation
 
@@ -191,8 +208,7 @@ object orientation. Spend some time first exlaining the concept itself
 
 ### Project
 This project will attempt to tie together most of the topics that have been
-covered throughout the week. Students will build a
-[Matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics)) class that stores
+covered throughout the week. Students will build a Matrix class that stores
 a matrix as a 2D array. The class should demonstrate the four principles of
 object orientation learned during instruction. For example, the variables for
 the rows, columns, and the 2D array itself should be private, and there should
@@ -200,18 +216,22 @@ be getter methods for retrieving this data. Again, it will be helpful to
 provide students with the main method from the solution or at least guide them
 in the right direction as far as creating test cases.
 
-- `Matrix(int rows, int cols)` - Constructor; creates a new Matrix of size
+- `public Matrix(int rows, int cols)` - Constructor; creates a new Matrix of size
   *rows* x *cols* filled with 0's
-- `Matrix(int[][] data)` - Constructor; creates a new Matrix represented by the
+- `public Matrix(int[][] data)` - Constructor; creates a new Matrix represented by the
   2D array *data*
-- `Matrix multiply(Matrix m)` - Performs matrix multiplication between this
-  Matrix and the Matrix parameter *m* and returns the result
-- `void print()` - Prints the matrix
-- `int getRows()` - Returns *rows*
-- `int getData()` - Returns *cols*
-- `int[][] getData()` Returns a copy of *data*. Students should construct a new
+- `public Matrix multiply(Matrix m)` - Performs
+  [matrix multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication) between
+  this Matrix and the Matrix parameter *m* and returns the result
+- `public void print()` - Prints the matrix
+- `public int getRows()` - Returns *rows*
+- `public int getData()` - Returns *cols*
+- `public int[][] getData()` Returns a copy of *data*. Students should construct a new
   2D array filled with the values from *data* rather than returning *data*
   directly.
+
+If time allows, have students create more functions for matrix operations such
+as `add`, `subtract`, `submatrix`, `rref`, etc.
 
 #### Sample Output
 ```
@@ -231,4 +251,47 @@ RESULT MATRIX:
 81 66 45 
 93 62 58 
 ```
+
+#### Solution Code
+[Main.java](solutions/friday/Main.java),
+[Matrix.java](solutions/friday/Matrix.java)
+
+
+## Alternative Projects
+This outline makes some assumptions about what students already know and do not
+already know. You may need to adapt this outline as you go, and use your
+judgement to decide which projects are too complex or not complex enough for
+your students. Here are some alternative projects that you could use:
+
+### Monday
+- Guessing game program: Chooses a random number from a certain range (use
+a Random object) and let the user guess a number until the correct number is
+guessed. After each guess, tell the user whether they guessed higher, lower
+than the correct number.
+
+### Tuesday
+- Factorial calculator: For an easier introduction to recursion, have students
+  create a program that calculates the factorial of a number recursively.
+- Fibonacci calculator: This is also a good introduction to recursion, and
+  probably a bit more difficult than the factorial calculator.
+
+### Wednesday
+- More sorting algorithms: Have students look at a list of popular sorting algorithms
+  and choose one (or some) that they would like to implement.
+
+### Thursday
+- Searching algorithms: If students are already proficient with using maps
+  (or finish the project early) and have a decent grasp of trees, students
+  can attempt to write a
+  [breadth-first](https://en.wikipedia.org/wiki/Breadth-first_search) or
+  [depth-first](https://en.wikipedia.org/wiki/Depth-first_search) algorithm.
+  This will be quite a challenge, so this is only recommended for very advanced
+  students!
+
+### Friday
+- Banking program: For a project that is more strictly OOP (and demonstrates
+  more of the four OOP principles learned on Friday), have students create a
+  "banking program" consisting of an abstract BankAccount class and child classes
+  CheckingAccount and SavingsAccount.
+
 
