@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Robotics and Beyond Academy Java</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="robotics-and-beyond-academy-java"><a class="header-link" href="#robotics-and-beyond-academy-java"></a>Robotics and Beyond Academy Java</h1>
+<h2 id="monday:-review"><a class="header-link" href="#monday:-review"></a>Monday: Review</h2>
+<h3 id="instruction"><a class="header-link" href="#instruction"></a>Instruction</h3>
+<p>First, have students set up a project in Eclipse and get comfortable with the
+IDE&#39;s layout and some of the more useful shortcuts (Ctrl-Shift-O, Ctrl-Shift-F,
+Ctrl-Space...). Then, spend a bit of time reviewing the very basics of Java to
+make sure everyone is up to speed. Students will need to be proficient in the
+following topics before going further:</p>
+<ul class="list">
+<li>Input/output</li>
+<li>Data types</li>
+<li>Operators</li>
+<li>Conditionals</li>
+<li>Loops</li>
+<li>Arrays</li>
+<li>Methods (including the structure of the main method)</li>
+</ul>
+<h3 id="project"><a class="header-link" href="#project"></a>Project</h3>
+<p>Have students create a calculator program that evaluates simple equations
+consisting of two operands and an operator. The calculator should support decimal
+arithmetic and handle the following operations:</p>
+<ul class="list">
+<li>Addition</li>
+<li>Subtraction</li>
+<li>Multiplication</li>
+<li>Division</li>
+<li>Remainder (modulus)</li>
+</ul>
+<h4 id="sample-output"><a class="header-link" href="#sample-output"></a>Sample Output</h4>
+<pre class="hljs"><code>42.5
+/
+2.5
+42.5 / 2.5 = 17.0</code></pre><h4 id="solution-code"><a class="header-link" href="#solution-code"></a>Solution Code</h4>
+<p><a href="solutions/monday/Calculator.java">Calculator.java</a></p>
+<h2 id="tuesday:-algorithms-and-recursion"><a class="header-link" href="#tuesday:-algorithms-and-recursion"></a>Tuesday: Algorithms and Recursion</h2>
+<h3 id="instruction-1"><a class="header-link" href="#instruction-1"></a>Instruction</h3>
+<p>Start off by introducing the concept of an algorithm. Some (if not all)
+students will already be familiar with the idea, but make sure everyone is on
+the same page as to what exactly an algorithm is. Then, move on to talk about
+recursion. Again, they may already be familiar with the concept.  Show some of
+the practical applications of recursion in writing algorithms, such as an
+algorithm for finding Fibonacci numbers. Lastly, make sure that students
+understand the difference between an iterative algorithm (i.e. one that uses a
+for loop) and a recursive algorithm.</p>
+<h3 id="project-1"><a class="header-link" href="#project-1"></a>Project</h3>
+<p>Show students the <a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi">Tower of Hanoi</a>
+game. It will be helpful to draw diagrams. Students will then write a simple
+recursive algorithm to solve the puzzle. It may be necessary to provide some
+starter code from the solution (i.e. the method signature for the solve function)
+to set students in the right direction.</p>
+<h4 id="sample-output-1"><a class="header-link" href="#sample-output-1"></a>Sample Output</h4>
+<pre class="hljs"><code>How many disks?
+4
+Moving disk 1 from SOURCE rod to SPARE rod
+Moving disk 2 from SOURCE rod to TARGET rod
+Moving disk 1 from SPARE rod to TARGET rod
+Moving disk 3 from SOURCE rod to SPARE rod
+Moving disk 1 from TARGET rod to SOURCE rod
+Moving disk 2 from TARGET rod to SPARE rod
+Moving disk 1 from SOURCE rod to SPARE rod
+Moving disk 4 from SOURCE rod to TARGET rod
+Moving disk 1 from SPARE rod to TARGET rod
+Moving disk 2 from SPARE rod to SOURCE rod
+Moving disk 1 from TARGET rod to SOURCE rod
+Moving disk 3 from SPARE rod to TARGET rod
+Moving disk 1 from SOURCE rod to SPARE rod
+Moving disk 2 from SOURCE rod to TARGET rod
+Moving disk 1 from SPARE rod to TARGET rod</code></pre><h4 id="solution-code-1"><a class="header-link" href="#solution-code-1"></a>Solution Code</h4>
+<p><a href="solutions/tuesday/Hanoi.java">Hanoi.java</a></p>
+<h2 id="wednesday:-algorithms-pt.-2"><a class="header-link" href="#wednesday:-algorithms-pt.-2"></a>Wednesday: Algorithms pt. 2</h2>
+<h3 id="instruction-2"><a class="header-link" href="#instruction-2"></a>Instruction</h3>
+<p>This lesson will focus on some important algorithms that students should be
+familiar with for AP Computer Science A and college-level courses: sorting
+algorithms. Diagrams will be helpful in explaining how each algorithm works.
+Be sure to cover the following algorithms in instruction:</p>
+<ul class="list">
+<li>Insertion sort</li>
+<li>Bubble sort</li>
+<li>Quick sort</li>
+</ul>
+<p>For more advanced students, show them the more complex algorithms like merge
+sort. It may be helpful to give students a brief introduction to
+<a href="https://en.wikipedia.org/wiki/Big_O_notation">order notation</a> to show which
+algorithms are most efficient in different cases.</p>
+<h3 id="project-2"><a class="header-link" href="#project-2"></a>Project</h3>
+<p>Have students implement the sorting algorithms that were learned during
+instruction (by default: insertion sort, bubble sort, and quick sort). If time
+allows, help students implement more complex sorting algorithms in a similar
+fashion. You may choose to provide the main method from the solution so that
+students have a &quot;driver&quot; function to test their algorithms on as they progress. Or,
+you could just instruct students to create appropriate test cases before starting
+on the sorting algorithms.</p>
+<h4 id="sample-output-2"><a class="header-link" href="#sample-output-2"></a>Sample Output</h4>
+<pre class="hljs"><code>small_array:
+35 4 14 19 42 6 11 25 
+Running insertionSort on small_array:
+4 6 11 14 19 25 35 42 
+
+medium_array:
+22 16 7 13 55 24 65 91 10 44 26 33 70 16 
+Running bubbleSort on medium_array:
+7 10 13 16 16 22 24 26 33 44 55 65 70 91 
+
+large_array:
+10 27 6 81 60 44 2 9 50 54 12 17 20 92 66 5 14 74 13 77 34 19 15 38 
+Running quickSort on large_array:
+2 5 6 9 10 12 13 14 15 17 19 20 27 34 38 44 50 54 60 66 74 77 81 92 </code></pre><h4 id="solution-code-2"><a class="header-link" href="#solution-code-2"></a>Solution Code</h4>
+<p><a href="solutions/wednesday/Sorting.java">Sorting.java</a></p>
+<h2 id="thursday:-data-structures"><a class="header-link" href="#thursday:-data-structures"></a>Thursday: Data Structures</h2>
+<h3 id="instruction-3"><a class="header-link" href="#instruction-3"></a>Instruction</h3>
+<p>Introduce the concept of a data structure, relating it to the data types
+students are already familiar with. Summarize the following data structures
+and explain how they are similar or different from other data structures:</p>
+<ul class="list">
+<li>Array</li>
+<li>Vectors</li>
+<li>Lists</li>
+<li>Sets</li>
+<li>Maps</li>
+<li>Trees</li>
+<li>Queues</li>
+<li>Stacks</li>
+<li>Hash Tables</li>
+</ul>
+<p>Be sure to provide examples of what situations are appropriate for using each
+data structure, and why using one may be preferable to another (i.e. using
+a hash table instead of a map). Also, show students an appropriate way to
+iterate through a map, as it will be necessary for the project.</p>
+<h3 id="project-3"><a class="header-link" href="#project-3"></a>Project</h3>
+<p>Students will create a phone book program using a map to store pairs of names
+and phone numbers. The phone book must support the following operations:</p>
+<ul class="list">
+<li><code>add</code> - Will prompt the user to enter a name and phone number to be added
+to the phone book</li>
+<li><code>remove</code> - Will prompt the user to enter a name to attempt to remove from the
+phone book</li>
+<li><code>search</code> - Will prompt the user to enter a name to search for in the phone
+book</li>
+<li><code>print</code> - Prints each entry of the phone book</li>
+<li><code>stop</code> - Stops the program</li>
+</ul>
+<h4 id="sample-output-3"><a class="header-link" href="#sample-output-3"></a>Sample Output</h4>
+<pre class="hljs"><code>add
+Enter a name:
+John Smith
+Enter a number:
+123456789
+John Smith has been added to the phone book.
+add
+Enter a name:
+Jane Doe
+Enter a number:
+555444333
+Jane Doe has been added to the phone book.
+print
+John Smith: 123456789
+Jane Doe: 555444333
+search
+Enter a name to search for:
+John Smith
+John Smith's number is 123456789.
+stop</code></pre><h4 id="solution-code-3"><a class="header-link" href="#solution-code-3"></a>Solution Code</h4>
+<p><a href="solutions/thursday/Phonebook.java">PhoneBook.java</a></p>
+<h2 id="friday:-object-orientation"><a class="header-link" href="#friday:-object-orientation"></a>Friday: Object Orientation</h2>
+<h3 id="instruction-4"><a class="header-link" href="#instruction-4"></a>Instruction</h3>
+<p>Again, depending on the students&#39; background, they may already be familiar with
+object orientation. Spend some time first exlaining the concept itself
+(diagrams!) before showing the syntax. You should explain:</p>
+<ul class="list">
+<li>Inheritance</li>
+<li>Encapsulation</li>
+<li>Abstraction</li>
+<li>Polymorphism</li>
+</ul>
+<h3 id="project-4"><a class="header-link" href="#project-4"></a>Project</h3>
+<p>This project will attempt to tie together most of the topics that have been
+covered throughout the week. Students will build a Matrix class that stores
+a matrix as a 2D array. The class should demonstrate the four principles of
+object orientation learned during instruction. For example, the variables for
+the rows, columns, and the 2D array itself should be private, and there should
+be getter methods for retrieving this data. Again, it will be helpful to
+provide students with the main method from the solution or at least guide them
+in the right direction as far as creating test cases.</p>
+<ul class="list">
+<li><code>public Matrix(int rows, int cols)</code> - Constructor; creates a new Matrix of size
+<em>rows</em> x <em>cols</em> filled with 0&#39;s</li>
+<li><code>public Matrix(int[][] data)</code> - Constructor; creates a new Matrix represented by the
+2D array <em>data</em></li>
+<li><code>public Matrix multiply(Matrix m)</code> - Performs
+<a href="https://en.wikipedia.org/wiki/Matrix_multiplication">matrix multiplication</a> between
+this Matrix and the Matrix parameter <em>m</em> and returns the result</li>
+<li><code>public void print()</code> - Prints the matrix</li>
+<li><code>public int getRows()</code> - Returns <em>rows</em></li>
+<li><code>public int getData()</code> - Returns <em>cols</em></li>
+<li><code>public int[][] getData()</code> Returns a copy of <em>data</em>. Students should construct a new
+2D array filled with the values from <em>data</em> rather than returning <em>data</em>
+directly.</li>
+</ul>
+<p>If time allows, have students create more functions for matrix operations such
+as <code>add</code>, <code>subtract</code>, <code>submatrix</code>, <code>rref</code>, etc.</p>
+<h4 id="sample-output-4"><a class="header-link" href="#sample-output-4"></a>Sample Output</h4>
+<pre class="hljs"><code>MATRIX 1:
+0 0 3 7 
+3 6 3 3 
+1 9 2 6 
+
+MATRIX 2:
+8 7 2 
+3 1 2 
+5 8 4 
+8 5 5 
+
+RESULT MATRIX:
+71 59 47 
+81 66 45 
+93 62 58 </code></pre><h4 id="solution-code-4"><a class="header-link" href="#solution-code-4"></a>Solution Code</h4>
+<p><a href="solutions/friday/Main.java">Main.java</a>,
+<a href="solutions/friday/Matrix.java">Matrix.java</a></p>
+<h2 id="alternative-projects"><a class="header-link" href="#alternative-projects"></a>Alternative Projects</h2>
+<p>This outline makes some assumptions about what students already know and do not
+already know. You may need to adapt this outline as you go, and use your
+judgement to decide which projects are too complex or not complex enough for
+your students. Here are some alternative projects that you could use:</p>
+<h3 id="monday"><a class="header-link" href="#monday"></a>Monday</h3>
+<ul class="list">
+<li>Guessing game program: Chooses a random number from a certain range (use
+a Random object) and let the user guess a number until the correct number is
+guessed. After each guess, tell the user whether they guessed higher, lower
+than the correct number.</li>
+</ul>
+<h3 id="tuesday"><a class="header-link" href="#tuesday"></a>Tuesday</h3>
+<ul class="list">
+<li>Factorial calculator: For an easier introduction to recursion, have students
+create a program that calculates the factorial of a number recursively.</li>
+<li>Fibonacci calculator: This is also a good introduction to recursion, and
+probably a bit more difficult than the factorial calculator.</li>
+</ul>
+<h3 id="wednesday"><a class="header-link" href="#wednesday"></a>Wednesday</h3>
+<ul class="list">
+<li>More sorting algorithms: Have students look at a list of popular sorting algorithms
+and choose one (or some) that they would like to implement.</li>
+</ul>
+<h3 id="thursday"><a class="header-link" href="#thursday"></a>Thursday</h3>
+<ul class="list">
+<li>Searching algorithms: If students are already proficient with using maps
+(or finish the project early) and have a decent grasp of trees, students
+can attempt to write a
+<a href="https://en.wikipedia.org/wiki/Breadth-first_search">breadth-first</a> or
+<a href="https://en.wikipedia.org/wiki/Depth-first_search">depth-first</a> algorithm.
+This will be quite a challenge, so this is only recommended for very advanced
+students!</li>
+</ul>
+<h3 id="friday"><a class="header-link" href="#friday"></a>Friday</h3>
+<ul class="list">
+<li>Banking program: For a project that is more strictly OOP (and demonstrates
+more of the four OOP principles learned on Friday), have students create a
+&quot;banking program&quot; consisting of an abstract BankAccount class and child classes
+CheckingAccount and SavingsAccount.</li>
+</ul>
+    </article>
+  </body>
+</html>
