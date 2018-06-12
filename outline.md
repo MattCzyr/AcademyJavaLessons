@@ -18,8 +18,9 @@ following topics before going further:
 - Methods (including the structure of the main method)
 
 ### Project
-Have students create a calculator program that evaluates simple equations. The
-calculator must support decimal operations and handle the following operations:
+Have students create a calculator program that evaluates simple equations
+consisting of two operands and an operator. The calculator must support decimal
+operations and handle the following operations:
 
 - Addition
 - Subtraction
@@ -29,18 +30,11 @@ calculator must support decimal operations and handle the following operations:
 
 #### Sample Output
 ```
-35.2
-+
-7.9
-=
-43.1
-```
-```
 42.5
 /
 2.5
 =
-17
+17.0
 ```
 
 
@@ -63,17 +57,8 @@ game. It will be helpful to draw diagrams. Students will then write a simple
 recursive algorithm to solve the puzzle. It will probably be necessary to
 provide some starter code from the solution (i.e. the method signature for the
 solve function) to set students in the right direction.
-```
-How many disks?
-3
-Moving disk 1 from SOURCE rod to TARGET rod
-Moving disk 2 from SOURCE rod to SPARE rod
-Moving disk 1 from TARGET rod to SPARE rod
-Moving disk 3 from SOURCE rod to TARGET rod
-Moving disk 1 from SPARE rod to SOURCE rod
-Moving disk 2 from SPARE rod to TARGET rod
-Moving disk 1 from SOURCE rod to TARGET rod
-```
+
+#### Sample Output
 ```
 How many disks?
 4
@@ -114,6 +99,24 @@ have a "driver" function to test their algorithms on as they progress. Or, you
 could just instruct students to create appropriate test cases before starting
 on the sorting algorithms themselves.
 
+#### Sample Output
+```
+small_array:
+35 4 14 19 42 6 11 25 
+Running insertionSort on small_array:
+4 6 11 14 19 25 35 42 
+
+medium_array:
+22 16 7 13 55 24 65 91 10 44 26 33 70 16 
+Running bubbleSort on medium_array:
+7 10 13 16 16 22 24 26 33 44 55 65 70 91 
+
+large_array:
+10 27 6 81 60 44 2 9 50 54 12 17 20 92 66 5 14 74 13 77 34 19 15 38 
+Running quickSort on large_array:
+2 5 6 9 10 12 13 14 15 17 19 20 27 34 38 44 50 54 60 66 74 77 81 92 
+```
+
 
 ## Thursday: Data Structures
 
@@ -134,7 +137,8 @@ explain how they are similar or different from other data structures:
 
 Be sure to provide examples of what situations are appropriate for using each
 data structure, and why using one may be preferable to another (i.e. using
-a hash table instead of a map).
+a hash table instead of a map). Also, show students an appropriate way to
+iterate through a map, as it will be necessary for the project.
 
 ### Project
 Students will create a phone book program using a map to store pairs of names
@@ -145,7 +149,32 @@ and phone numbers. The phone book must support the following operations:
   phone book
 - `search` - Will prompt the user to enter a name to search for in the phone
   book
+- `print` - Prints each entry of the phone book
 - `stop` - Stops the program
+
+#### Sample Output
+```
+add
+Enter a name:
+John Smith
+Enter a number:
+123456789
+John Smith has been added to the phone book.
+add
+Enter a name:
+Jane Doe
+Enter a number:
+555444333
+Jane Doe has been added to the phone book.
+print
+John Smith: 123456789
+Jane Doe: 555444333
+search
+Enter a name to search for:
+John Smith
+John Smith's number is 123456789.
+stop
+```
 
 
 ## Friday: Object Orientation
@@ -183,4 +212,23 @@ in the right direction as far as creating test cases.
 - `int[][] getData()` Returns a copy of *data*. Students should construct a new
   2D array filled with the values from *data* rather than returning *data*
   directly.
+
+#### Sample Output
+```
+MATRIX 1:
+0 0 3 7 
+3 6 3 3 
+1 9 2 6 
+
+MATRIX 2:
+8 7 2 
+3 1 2 
+5 8 4 
+8 5 5 
+
+RESULT MATRIX:
+71 59 47 
+81 66 45 
+93 62 58 
+```
 
