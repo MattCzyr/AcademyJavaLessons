@@ -1,4 +1,4 @@
-package roboticsandbeyond.tuesday;
+package solutions.tuesday;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package roboticsandbeyond.friday;
+package solutions.friday;
 
 public class Matrix {
 	

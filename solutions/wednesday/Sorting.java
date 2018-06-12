@@ -1,4 +1,4 @@
-package roboticsandbeyond.wednesday;
+package solutions.wednesday;
 
 public class Sorting {
 

@@ -1,4 +1,4 @@
-package roboticsandbeyond.friday;
+package solutions.friday;
 
 import java.util.Random;
 
