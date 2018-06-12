@@ -32,7 +32,7 @@ public class Main {
 		System.out.print("\n");
 		
 		Matrix m3 = m1.multiply(m2);
-		System.out.println("MATRIX 3:");
+		System.out.println("RESULT MATRIX:");
 		m3.print();
 	}
 	

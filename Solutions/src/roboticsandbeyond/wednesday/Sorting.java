@@ -8,23 +8,38 @@ public class Sorting {
 		int[] large_array = { 10, 27, 6, 81, 60, 44, 2, 9, 50, 54, 12, 17, 20, 92, 66, 5, 14, 74, 13, 77, 34, 19, 15, 38 };
 
 		// insertionSort
-		System.out.println("Running insertionSort on small_array...");
-		insertionSort(small_array);
+		System.out.println("small_array:");
 		for (int i = 0; i < small_array.length; i++) {
 			System.out.print(small_array[i] + " ");
 		}
 		System.out.print("\n");
+		System.out.println("Running insertionSort on small_array:");
+		insertionSort(small_array);
+		for (int i = 0; i < small_array.length; i++) {
+			System.out.print(small_array[i] + " ");
+		}
+		System.out.print("\n\n");
 
 		// bubbleSort
-		System.out.println("Running bubbleSort on medium_array...");
-		bubbleSort(medium_array);
+		System.out.println("medium_array:");
 		for (int i = 0; i < medium_array.length; i++) {
 			System.out.print(medium_array[i] + " ");
 		}
 		System.out.print("\n");
+		System.out.println("Running bubbleSort on medium_array:");
+		bubbleSort(medium_array);
+		for (int i = 0; i < medium_array.length; i++) {
+			System.out.print(medium_array[i] + " ");
+		}
+		System.out.print("\n\n");
 
 		// quickSort
-		System.out.println("Running quickSort on large_array...");
+		System.out.println("large_array:");
+		for (int i = 0; i < large_array.length; i++) {
+			System.out.print(large_array[i] + " ");
+		}
+		System.out.print("\n");
+		System.out.println("Running quickSort on large_array:");
 		quickSort(large_array);
 		for (int i = 0; i < large_array.length; i++) {
 			System.out.print(large_array[i] + " ");
